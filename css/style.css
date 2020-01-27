@@ -1,0 +1,15 @@
+h1, h2, h3{
+    color: lightblue;
+    font: arial;
+    
+}
+
+.btn-secondary{
+    background-color: rgb(125,140,188);
+    
+}
+
+.home{
+    background-color: rgb(100,100,100);
+}
+

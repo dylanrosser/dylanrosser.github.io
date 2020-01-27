@@ -1,2 +1,0 @@
-# dylanrosser.github.io
-My 
