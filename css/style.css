@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5, p1{
     color: lightblue;
     font: arial;
 
@@ -11,6 +11,9 @@ h1, h2, h3, h4, h5{
 
 
 .home{
-    background-image: url('photos/th.png');
+    background-color: rgb(100,100,100);
+}
+
+body{
     background-color: rgb(100,100,100);
 }
