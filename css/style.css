@@ -10,10 +10,22 @@ h1, h2, h3, h4, h5, p1{
 }
 
 
+/*
 .home{
     background-color: rgb(100,100,100);
 }
+*/
+
 
 body{
+
+    
+/*
+    background:transparent url("../photos/digital_layout_noise_bw.png");
+    background-repeat: repeat;
+*/
     background-color: rgb(100,100,100);
 }
+
+
+

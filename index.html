@@ -12,32 +12,19 @@
     <title>DYLANROSSER</title>
   </head>
 
-  <body>
-      <div class = "container-fluid home vh-100">
+  <body class="bg-secondary">
+
+      <div class = "container-fluid vh-100">
           <div class="row pt-5">
               <div class="col text-center">
-                <h1>Hello & Welcome</h1>
+                <h1>Hello & Welcome to my site!</h1>
               </div>
             </div>
-            <div class="row">
-              <div class="col text-center">
-                <h2>I am Dylan Rosser,</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col text-center">
-                <h3>Electrical Engineer</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col text-center">
-                <h5>Please bear with me as I construct this site. :)</h5>
-              </div>
-            </div>
+          
             <div class="row ">
               <div class="col text-center">
-                  <a href="resume/Dylan_Rosser_Resume_no_contact.pdf" download="Rosser_Resume">
-                  <button type="button" class="btn btn-secondary btn-rounded">Download Resume</button></a>
+                  <a href="resume/Dylan_Rosser_Resume_no_contact.pdf">
+                  <button type="button" class="btn btn-secondary btn-rounded">Resume</button></a>
                   <a href="papers/LNA_dylanrosser.pdf">
                   <button type="button" class="btn btn-secondary btn-rounded">LNA Design</button></a>
                   <a href="https://www.github.com/dylanrosser">
@@ -46,30 +33,70 @@
             </div>
 
             <div class="row mt-3">
-              <div class="col text-center">
-                <p1>In the spring of 2020, my team of 3 taped out a 10-bit SAR ADC in a 28nm CMOS process. Full write up coming soon!</p1>
+              <div class="col">
+                <p1>In the spring of 2020, my team of 3 taped out a 10-bit successive approximation register analog to digital converter (SAR ADC) in a 28nm CMOS process. A SAR ADC converts an analog voltage to digital code by performing a binary search. Put simply, the ADC starts with a guess of the analog voltage value, then repeatedly refines this guess by comparing it to the true value. The core components of a SAR ADC are a sample-and-hold circuit, a comparator, a digital-to-analog converter (DAC), and the control logic. A snap shot of full chip layout and a close-up are shown below.</p1>
                 </div>
             </div>
 
             <div class="row mt-3 container-fluid">
               <div class="col text-center">
+                  <h5>Chip Layout</h5>
+                <img src="photos/chip_callout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+
+            <div class="row mt-3 container-fluid">
+              <div class="col text-center">
+                  <h5>SAR ADC Components</h5>
+                <img src="photos/SAR_floorplan.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+
+            <div class="row mt-3 container-fluid">
+              <div class="col text-center">
+                  <h5>SAR ADC Components</h5>
                 <img src="photos/SAR_layout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
                 </div>
             </div>
 
-            <div class="row mt-3">
-              <div class="col text-center">
-                <p1>StrongARM Comparator in 28nm</p1>
-                </div>
-            </div>
-
             <div class="row mt-3 container-fluid">
               <div class="col text-center">
+                  <h5>Comparator Schematic</h5>
+                  <img src="photos/strongarm.png" alt="StrongARM Schematic", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+            <div class="row mt-3 container-fluid">
+              <div class="col text-center">
+                  <h5>Comparator Layout</h5>
                 <img src="photos/strongarm_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+          <div class="row mt-3 container-fluid">
+              <div class="col text-center">
+                  <h5>Bootstrap Switch Layout</h5>
+                <img src="photos/th_with_dummy_layout.png" alt="bootstrap", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+          <div class="row mt-3 container-fluid">
+              <div class="col text-center">
+                  <h5>Control Logic Layout</h5>
+                <img src="photos/SAR_logic_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+            <div class="row mt-3 container-fluid">
+              <div class="col text-center">
+                  <p1>This site is under construction!</p1>
+                
                 </div>
             </div>
       </div>
 
+
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
