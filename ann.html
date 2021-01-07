@@ -51,7 +51,7 @@
                     <div class="col-xl text-center"><h3><br>I. Introduction<br></h3></div></div>
                   
                 <div class="row">
-              <div class="col-xl text-left">
+              <div class="col-xs-6 text-justify">
                   <p1>Contemporary electronic neural networks are a topic of much research. In the last decade, they have contributed significantly to advances in the fields of computer vision, natural language processing, and many others. Artificial neural networks (ANN) attempt to mimic the computational structure of the human brain. Much like neural pathways inside our brains are strengthened, or weakened, to form the basis of memory, cognition, and learning, the ‘weights’ inside an ANN can be modified using backpropagation during supervised learning.</p1>
                   
                   <p1> While the majority of ANNs exist in the digital domain, increasingly by semi-special purpose ICs like the GPU or TPU, the desire for always-on, low power edge computing has inspired some unique solutions that utilize analog or mixed-signal neural networks.  In this project, I demonstrate how to build and train an artificial analog neural network that can compute common logic functions.<br><br></p1>
@@ -69,7 +69,7 @@
               </div>
               
             <div class="row">
-              <div class="col-xl text-left">
+              <div class="col-xl text-justify">
                   <p1>The biological neuron serves as the inspiration for the artificial neuron shown in figure 2. Each input to the neuron, <i>x<sub>0</sub> … x<sub>n</sub></i>, is multiplied by a weight, <i>w<sub>0</sub> … w<sub>n</sub></i>, and the sum of these products is computed. A bias value, b, is often included in the sum, but is omitted here for simplicity. The sum is passed through an activation function to determine the output. In this project, we will use op-amps to realize both the weighted sum calculation and the activation function.</p1>
                   
               </div>
@@ -85,7 +85,7 @@
       
       
        <div class="row">
-              <div class="col-xl text-left">
+              <div class="col-xl text-justify">
                   <p1>Figure 3 shows a typical implementation of a shallow feed-forward artificial neural network. Input vector <i>x</i> is multiplied with a weight matrix, then passed to an activation function to produce <i>y</i>. Another weight matrix is multiplied with <i>y</i>, then passed through an activation function to calculate the output values.</p1>
                   
                   <p1>Before we can use an ANN, we must train it.  Training a neural network means to adjust the weights in response to error you observe at the output. The conventional method of training a neural network is to use the <a href="http://neuralnetworksanddeeplearning.com/chap2.html">backpropagation algorithm</a>. In this project, we backpropagate the error manually, adjusting the weights in response to an error at the output. For the simple neural network we will build, it is possible to train the network using a little intuition and circuit analysis. </p1>
@@ -106,7 +106,7 @@
           
       
           <div class="row">
-              <div class="col-xl text-left">
+              <div class="col-xl text-justify">
                   <p1>Figure 4 shows the analog neuron that will form the basis of the network we will build. In the figure, DIO 0 & 1 represent 3.3V logic level signals being driven by the <a href="https://wiki.analog.com/university/tools/m2k">Analog Devices Active Learning Module</a> used to test this circuit. This means that DIO 0 & 1 can toggle between 0 and 3.3V. The circuit uses &#177;3V supply, but larger voltage rails are acceptable if your op-amps are rated for it. The circuit uses two potentiometers as weights for the two inputs. The setting of the potentiometer acts as a voltage divider to set the weight of the input.  The first op-amp computes the weighted sum of the inputs. This is also know as multiply-and-accumulate (MAC), and is equivalent to the inner product calculation described above.<br><br></p1>
                       
                        <div class="row">
@@ -145,7 +145,7 @@
           
           
           <div class="row">
-              <div class="col-xl text-left">
+              <div class="col-xl text-justify">
                   <p1>The Analog Neural Network of figure 5 combines 3 neurons into a 2-layer architecture, that can be trained to implement more complex functions than a single neuron. We will train the neural network shown here to realize the logical XOR function. Doing so will be more involved than the single neuron. We will need to study the circuit closely and understand each component to expedite the training.<br><br>
 
                       Note the different architectures used for the excitatory vs. inhibitory neuron. While similar to the excitatory neuron that has been discussed thus far, the inhibitory neuron’s inverting configuration consists of a weighted voltage-summing inverting-amplifier followed by a voltage comparator for activation.   The voltage at the output of the summing amplifier is given by the relationship:<br><br>
@@ -167,7 +167,7 @@
               </div>
           
           <div class="row">
-              <div class="col-xl text-left">
+              <div class="col-xl text-justify">
                   <p1>The analog neural network was trained using the same process as descibed above. After backpropaging the error manually and adjusting the weights, the circuit could sucessfully perform the XOR function. I hope this has been a helpful explanation of how you too could build an analog neural network. I believe that with the increasing prevalance of neural computing architectures in many of our hand-held devices, it is important to understand how analog and mixed-signal neural networks are one solution that for high efficientcy in power contstrained and mobile applications.<br><br></p1>
                   
               </div>
