@@ -1,5 +1,4 @@
 h1, h2, h3, h4, h5, p1{
-    color: lightblue;
     font: arial;
 
 }
@@ -9,23 +8,28 @@ h1, h2, h3, h4, h5, p1{
 
 }
 
-
-/*
-.home{
-    background-color: rgb(100,100,100);
-}
-*/
-
-
 body{
-
-    
-/*
-    background:transparent url("../photos/digital_layout_noise_bw.png");
-    background-repeat: repeat;
-*/
-    background-color: rgb(100,100,100);
+    background-color: rgb(255,255,255);
 }
 
+.headshot{
+    max-width: 50%
+}
 
+ol.numbered{
+    list-style-type: upper-roman;
+}
 
+.smart-scroll{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.scrolled-down{
+   transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+   transform:translateY(0); transition: all 0.3s ease-in-out;
+}

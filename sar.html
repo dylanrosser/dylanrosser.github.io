@@ -19,7 +19,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
         <li class="nav-item">
         <a class="nav-link" href="resume/Dylan_Rosser_Resume_no_contact.pdf">Resume</a>
@@ -28,7 +28,7 @@
         <a class="nav-link" href="contact.html">Contact</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Projects
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -42,22 +42,74 @@
   </div>
 </nav>
 
-      <!-- Homepage -->
-      <div class = "container-fluid vh-100 p-5">
-          <div class="row">
-              <div class="col-sm text-center">
-                <img src="photos/headshot_full.jpg" class = "img-fluid rounded headshot" alt="headshot">
-              </div>
-              
-              <div class="col-sm text-center">
-                  <h5>My name is Dylan Rosser. I'm an electrical engineer with a passion for electronics, signals, and systems. I received the B.S. degree in Electrical Engineering from the University of New Haven in 2017, and the M.S. degree in Electrical and Computer Engineering at Carnegie Mellon University in 2020. After my undergraduate degree, I worked as an electrical systems designer for large electrical power and control systems in New York City. I worked as part of an elite team of engineers conducting short circuit, coordination, and arc flash studies for mission critical clients, including banking data centers in the financial capital of the world.<br><br>
-                      
-                      While pursuing my masters degree, my renewed focus on analog circuits and data converters led to a concentration on mixed-signal integrated circuit design. As part of the <a href="https://research.ece.cmu.edu/~eecs/research/index.html">Energy-Efficient Circuits and Systems Group</a> I worked on computational data converters and microelectronic circuits such as this <a href="ann.html">Analog Neural Network</a>.  My research interests include low power data converters, RF and audio circuits, and brain-inspired machine learning circuits.</h5>
-              </div>
-            </div>
-          </div>
+      <!-- SAR ADC -->
+      <div class = "container-fluid w-50">
           
-          <!--- Footer --->
+          <div class="row mt-3">
+              <div class="col text-center">
+                <h1>Succesive Approximation Register Analog-to-Digital Converter</h1>
+                </div>
+            </div>
+          
+            <div class="row mt-3 mx-5">
+              <div class="col text-center">
+                <p1>A Succesive Approximation Register Analog-to-Digital Converter (SAR ADC) converts an analog voltage to digital code by performing a binary search. Put simply, the ADC starts with a guess of the analog voltage value, then repeatedly refines this guess by comparing it to the true value. The core components of a SAR ADC are a sample-and-hold circuit, a comparator, a digital-to-analog converter (DAC), and the control logic. The below images show a SAR ADC designed by my team at Carnegie Mellon University and taped out in a 28-nm CMOS process in 2020.</p1>
+                </div>
+            </div>
+
+            <div class="row mt-3 container-fluid mt-5">
+              <div class="col text-center">
+                  <h5>Chip Layout</h5>
+                <img src="photos/chip_callout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+
+            <div class="row mt-3 container-fluid mt-5">
+              <div class="col text-center">
+                  <h5>SAR ADC Components</h5>
+                <img src="photos/SAR_floorplan.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+
+            <div class="row mt-3 container-fluid mt-5">
+              <div class="col text-center">
+                  <h5>SAR ADC Components</h5>
+                <img src="photos/SAR_layout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+
+            <div class="row mt-3 container-fluid mt-5">
+              <div class="col text-center">
+                  <h5>Comparator Schematic</h5>
+                  <img src="photos/strongarm.png" alt="StrongARM Schematic", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+            <div class="row mt-3 container-fluid mt-5">
+              <div class="col text-center">
+                  <h5>Comparator Layout</h5>
+                <img src="photos/strongarm_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+          <div class="row mt-3 container-fluid mt-5">
+              <div class="col text-center">
+                  <h5>Bootstrap Switch Layout</h5>
+                <img src="photos/th_with_dummy_layout.png" alt="bootstrap", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+          <div class="row mt-3 container-fluid mt-5 mb-5">
+              <div class="col text-center">
+                  <h5>Control Logic Layout</h5>
+                <img src="photos/SAR_logic_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
+                </div>
+            </div>
+          
+      </div>
+
+
+      <!--- Footer --->
           <div class="row">
               <div class="col-sm text-center bg-dark text-light">
                                   <!-- hitwebcounter Code START -->
@@ -66,13 +118,6 @@
 <img src="https://hitwebcounter.com/counter/counter.php?page=7736542&style=0007&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
               </div>
           </div>
-
-      
-      
-      
-       
-
-
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
