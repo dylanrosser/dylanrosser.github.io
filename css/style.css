@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, p1{
 
 body{
     background-color: rgb(255,255,255);
+    padding-bottom: 70px;
 }
 
 .headshot{
@@ -20,16 +21,10 @@ ol.numbered{
     list-style-type: upper-roman;
 }
 
-.smart-scroll{
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-.scrolled-down{
-   transform:translateY(-100%); transition: all 0.3s ease-in-out;
-}
-.scrolled-up{
-   transform:translateY(0); transition: all 0.3s ease-in-out;
+.footer {
+    position: relative;
+    bottom: -200px;
+
+    
+
 }

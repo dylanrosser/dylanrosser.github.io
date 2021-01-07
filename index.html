@@ -43,7 +43,7 @@
 </nav>
 
       <!-- Homepage -->
-      <div class = "container-fluid vh-100 p-5">
+      <div class = "container-fluid p-5">
           <div class="row">
               <div class="col-xl text-center">
                 <img src="photos/headshot_full.jpg" class = "img-fluid rounded headshot" alt="headshot">
@@ -58,6 +58,7 @@
           </div>
           
           <!--- Footer --->
+      <div class="container-fluid footer">
           <div class="row">
               <div class="col-xl text-center bg-dark text-light">
                                   <!-- hitwebcounter Code START -->
@@ -65,6 +66,7 @@
 <a href="https://www.hitwebcounter.com" target="_blank">
 <img src="https://hitwebcounter.com/counter/counter.php?page=7736542&style=0007&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
               </div>
+          </div>
           </div>
 
       
@@ -79,23 +81,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-            <script>// add padding top to show content behind navbar
-$('body').css('padding-top', $('.navbar').outerHeight() + 'px')
 
-// detect scroll top or down
-if ($('.smart-scroll').length > 0) { // check if element exists
-    var last_scroll_top = 0;
-    $(window).on('scroll', function() {
-        scroll_top = $(this).scrollTop();
-        if(scroll_top < last_scroll_top) {
-            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
-        }
-        else {
-            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
-        }
-        last_scroll_top = scroll_top;
-    });
-}
-      </script>
   </body>
 </html>
