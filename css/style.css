@@ -10,7 +10,6 @@ h1, h2, h3, h4, h5, p1{
 
 body{
     background-color: rgb(255,255,255);
-    padding-bottom: 70px;
 
 }
 
@@ -22,10 +21,39 @@ ol.numbered{
 
 .footer {
     position: relative;
-    bottom: -200px;
+    bottom: 0px;
 
     
 
 }
 
+.contact{
+    background-color: lightblue;
+}
 
+
+
+.email{
+    font-family: "Dosis";
+    
+}
+
+.name h1{
+    font-family: "Dosis";
+    font-size-adjust: 0.6;
+    
+    
+    
+}
+
+.dosis{
+    font-family: "Dosis";
+}
+
+.bg-section2{
+    background-color: cornflowerblue;
+}
+
+*{
+scroll-behavior: smooth !important;
+}
