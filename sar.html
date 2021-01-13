@@ -48,53 +48,77 @@
           
             <div class="row mt-3 mb-5">
               <div class="col text-justify">
-                <p1>A Successive Approximation Register Analog-to-Digital Converter (SAR ADC) converts an analog voltage to digital code by performing a binary search. Put simply, the ADC starts with a guess of the analog voltage value, then repeatedly refines this guess by comparing it to the true value. The core components of a SAR ADC are a sample-and-hold circuit, a comparator, a digital-to-analog converter (DAC), and the control logic. The below images show a SAR ADC designed by my team at Carnegie Mellon University and taped out in a 28-nm CMOS process in 2020.</p1>
+                <p1>A Successive Approximation Register Analog-to-Digital Converter (SAR ADC) converts an analog voltage to digital code by performing a binary search. Put simply, the ADC starts with a guess of the analog voltage value, then repeatedly refines this guess by comparing it to the true value. The core components of a SAR ADC are a sample-and-hold circuit, a comparator, a digital-to-analog converter (DAC), and the control logic. This page features a SAR ADC designed by my team at Carnegie Mellon University and taped out in a 28-nm CMOS process in 2020.</p1>
+                </div>
+            </div>
+          
+          <div class="row mt-3 mb-5">
+              <div class="col text-center">
+                  <h5>SAR ADC Block Diagram</h5>
+                <img src="photos/SAR_diff.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-3 mb-5">
               <div class="col text-center">
                   <h5>Chip Layout</h5>
                 <img src="photos/chip_callout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
                 </div>
             </div>
+          
+          <div class="row mt-3 mb-5">
+              <div class="col text-justify">
+                <p1>Each component in the SAR ADC is outlined in red below. The bootstrap switch, combined with the capacitive digital-to-analog converter (CDAC) comprise a sample-and-hold circuit. The bootstrap switch utilizes feedback to keep the drain to source voltage of the sampling switch constant. This constant V<sub>ds</sub> across the sampling switch gives the bootstrap switch good linearity, making it an ideal circuit for analog data aquisition. The split-capacitor charge redistribution DAC uses binary weighted capacitors with a unit size ~1fF. These capacitors were implemented as MOMCAPs on the metal 6 layer.</p1>
+                </div>
+            </div>
 
-            <div class="row mt-5">
+            <div class="row mt-3 mb-5">
               <div class="col text-center">
                   <h5>SAR ADC Components</h5>
                 <img src="photos/SAR_floorplan.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-3 mb-5">
               <div class="col text-center">
                   <h5>SAR ADC Components</h5>
                 <img src="photos/SAR_layout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
                 </div>
             </div>
+          
+          <div class="row mt-3 mb-5">
+              <div class="col text-justify">
+                <p1>A Comparator is a circuit that <i>compares</i> two voltages. The role of a comparator in a SAR ADC is to compare the current estimation of the input to the true input. More accurately, the comparator in this ADC tells us the polarity of our error after each loop update. Because of the high speed and low voltage overhead of this design, the speed and noise performance of the comparator are critical. The comparator shown here operates at speeds over 1 GHz while contributing minimal noise to each measurement.</p1>
+                </div>
+            </div>
 
-            <div class="row mt-5">
+            <div class="row mt-3 mb-5">
               <div class="col text-center">
                   <h5>Comparator Schematic</h5>
                   <img src="photos/strongarm.png" alt="StrongARM Schematic", class="img-fluid rounded mx-auto">
                 </div>
             </div>
           
-            <div class="row mt-5">
+            <div class="row mt-3 mb-5">
               <div class="col text-center">
                   <h5>Comparator Layout</h5>
                 <img src="photos/strongarm_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
                 </div>
             </div>
           
-          <div class="row mt-5">
+          <div class="row mt-3 mb-5">
+              <div class="col text-justify">
+                <p1>This comparator was laid out following the design rules for a 28nm process. Close attention has been paid to mitigate the effects of parasitics and process gradients. Dummy devices and interdigitated devices help minimize the effects of process gradients, and improve matching.</p1>
+                </div>
+            </div>
+          <div class="row mt-3 mb-5">
               <div class="col text-center">
                   <h5>Bootstrap Switch Layout</h5>
                 <img src="photos/th_with_dummy_layout.png" alt="bootstrap", class="img-fluid rounded mx-auto">
                 </div>
             </div>
           
-          <div class="row mt-5 mb-5">
+          <div class="row mt-3 mb-5">
               <div class="col text-center">
                   <h5>Control Logic Layout</h5>
                 <img src="photos/SAR_logic_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
