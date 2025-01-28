@@ -1,216 +1,304 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>dylanrosser.us</title>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
-  <body>
-      <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light smart-scroll">
-  <a class="navbar-brand" href="index.html">Dylan</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+  <title>dylanrosser.us</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light smart-scroll">
+    <a class="navbar-brand" href="index.html">Dylan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
+      <ul class="navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" href="resume/Dylan_Rosser_Resume_no_contact.pdf">Resume</a>
-      </li>
+          <a class="nav-link" href="resume/Dylan_Rosser_Resume_2025.pdf">Resume</a>
+        </li>
         <li class="nav-item">
-        <a class="nav-link active" href="index.html#projects">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html#contact">Contact</a>
-      </li>
-        
-      
-    </ul>
-  </div>
-</nav>
+          <a class="nav-link active" href="index.html#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
 
-      <!-- Analog Neural Network -->
-      <div class = "container-fluid col-xs-6 col-s-6 col-l-6 col-xl-6 pt-5 px-5">
-                  <div class="row">
-                    <div class="col-xl text-center"><h1><br>The Analog Neural Network<br></h1></div></div>
-          
-          <div class="row">
-                    <div class="col-xl text-center"><h3><br>I. Introduction<br></h3></div></div>
-                  
-                <div class="row">
-              <div class="col-xs-6 text-justify">
-                  <p1>Contemporary electronic neural networks are a topic of much research. In the last decade, they have contributed significantly to advances in the fields of computer vision, natural language processing, and many others. Artificial neural networks (ANN) attempt to mimic the computational structure of the human brain. Much like neural pathways inside our brains are strengthened, or weakened, to form the basis of memory, cognition, and learning, the ‘weights’ inside an ANN can be modified using backpropagation during supervised learning.</p1>
-                  
-                  <p1> While the majority of ANNs exist in the digital domain, increasingly by semi-special purpose ICs like the GPU or TPU, the desire for always-on, low power edge computing has inspired some unique solutions that utilize analog or mixed-signal neural networks.  In this project, I demonstrate how to build and train an artificial analog neural network that can compute common logic functions.<br><br></p1>
-                  
-                  <p1>The biological neuron, shown in figure 1, is the basis of ANNs. The dendrites receive electrical signals from other neurons. The ‘strength’ of these received signals is controlled by chemicals called neurotransmitters that exist in the synapse, or gap, between neurons. The cell body of the neuron effectively sums the received electrical signals. If the sum of these signals crosses a threshold, the neuron will fire, or activate.<br><br></p1>
-                  
-              </div>
-              </div>
-              
-              <div class="row">
-                  <div class="col-xl text-center mb-5">
-                <img src="photos/bioneuron.jpg" class = "img-fluid rounded center mt-5" alt="Biological_Neuron">
-                  <h5>Figure 1. The Biological Neuron<br></h5>
-                    </div>
-              </div>
-              
-            <div class="row">
-              <div class="col-xl text-justify">
-                  <p1>The biological neuron serves as the inspiration for the artificial neuron shown in figure 2. Each input to the neuron, <i>x<sub>0</sub> … x<sub>n</sub></i>, is multiplied by a weight, <i>w<sub>0</sub> … w<sub>n</sub></i>, and the sum of these products is computed. A bias value, b, is often included in the sum, but is omitted here for simplicity. The sum is passed through an activation function to determine the output. In this project, we will use op-amps to realize both the weighted sum calculation and the activation function.</p1>
-                  
-              </div>
-              </div>
-          
-           <div class="row">
-                  <div class="col-xl text-center mb-5">
-                <img src="photos/artificial_neuron.jpg" class = "img-fluid rounded center mt-5" alt="artificial_neuron">
-                  <h5>Figure 2. The Artificial Neuron</h5>
-                    </div>
-              </div>
-      
-      
-      
-       <div class="row">
-              <div class="col-xl text-justify">
-                  <p1>Figure 3 shows a typical implementation of a shallow feed-forward artificial neural network. Input vector <i>x</i> is multiplied with a weight matrix, then passed to an activation function to produce <i>y</i>. Another weight matrix is multiplied with <i>y</i>, then passed through an activation function to calculate the output values.</p1>
-                  
-                  <p1>Before we can use an ANN, we must train it.  Training a neural network means to adjust the weights in response to error you observe at the output. The conventional method of training a neural network is to use the <a href="http://neuralnetworksanddeeplearning.com/chap2.html">backpropagation algorithm</a>. In this project, we backpropagate the error manually, adjusting the weights in response to an error at the output. For the simple neural network we will build, it is possible to train the network using a little intuition and circuit analysis. </p1>
-                  
-              </div>
-              </div>
-          
-           <div class="row">
-                  <div class="col-xl text-center mb-5">
-                <img src="photos/artificial_nn.jpg" class = "img-fluid rounded center mt-5" alt="artificial_neuron">
-                  <h5>Figure 3. Artificial Neural Network</h5>
-                    </div>
-              </div>
-      
-      <div class="row">
-                    <div class="col-xl text-center"><h3><br>II. The Analog Neuron<br></h3></div></div>
-      
-          
-      
-          <div class="row">
-              <div class="col-xl text-justify">
-                  <p1>Figure 4 shows the analog neuron that will form the basis of the network we will build. In the figure, DIO 0 & 1 represent 3.3V logic level signals being driven by the <a href="https://wiki.analog.com/university/tools/m2k">Analog Devices Active Learning Module</a> used to test this circuit. This means that DIO 0 & 1 can toggle between 0 and 3.3V. The circuit uses &#177;3V supply, but larger voltage rails are acceptable if your op-amps are rated for it. The circuit uses two potentiometers as weights for the two inputs. The setting of the potentiometer acts as a voltage divider to set the weight of the input.  The first op-amp computes the weighted sum of the inputs. This is also know as multiply-and-accumulate (MAC), and is equivalent to the inner product calculation described above.<br><br></p1>
-                      
-                       <div class="row">
-                  <div class="col-xl text-center mb-5">
-                <p1><i>v<sub>1</sub>=w<sub>0</sub> D<sub>0</sub>+w<sub>1</sub> D<sub>1</sub></i></p1>
-                    </div>
-              </div>
-                      <div class="row">
-                  <div class="col-xl text-center mb-5">
-                <img src="photos/analog_neuron.png" class = "img-fluid rounded center mt-5" alt="analog_neuron">
-                  <h5>Figure 4. Analog Neuron</h5>
-                    </div>
-              </div>
-                  
-                  <p1>The second op-amp realizes the activation function. The value at the output of the first op-amp (the weighted sum) is compared to a threshold that is set by analog output pin W1. For this circuit, W1 was set to 1.2V, though there is a range of voltages that would be acceptabled based on how the weights are set. If that weighted sum is greater than the threshold, the neuron fires, and the output of the neuron will approach the positive supply rail. An op-amp configured in this way functions as a comparator and can be referred to as such. <br><br>
 
-                    Our goal is to train the analog neuron to realize the logical AND function. This will require us to toggle the digital output and adjust the weights manually.  We can also analyze the resistive portion of the circuit (summing amplifier) by using our circuit analysis toolbox: superposition, resistive voltage dividers, KVL, and KCL. Other variables that we can exercise are the weights, threshold, and supply voltages. The training procedure for this circuit is such:<br><br>
-                      
-                     <ol class="numbered">
-                      <li>Toggle DIO 0 and DIO 1 and observe how the circuit's output changes.<br><br></li>
-                      <li>For a given set of inputs, try changing the weights one at a time until the output is correct. Then change the inputs and adjust the weights again, until the output is correct.<br><br></li>
-                      <li>In general, if changing an input seems to contribute to the incorrect answer, try decreasing that input’s weight. Conversely, if an input seems to contribute to the correct answer, try increasing that input’s weight.<br><br></li>
-                     <li>Repeat these steps until the circuit produces the logical AND function.<br><br></li>
-                      </ol>
-                      
-                      If these steps fail, you can always derive precise weight values analytically. Once the analog neuron has been built and trained, we can use multiple neurons to build an analog artificial neural network and train more complex functions.
-                  </p1> 
- 
-              </div>
-              </div>
-          
-          <div class="row">
-                    <div class="col-xl text-center"><h3><br>III. The Analog Neural Network<br></h3>
-          </div>
-          </div>
-          
-          
-          <div class="row">
-              <div class="col-xl text-justify">
-                  <p1>The Analog Neural Network of figure 5 combines 3 neurons into a 2-layer architecture, that can be trained to implement more complex functions than a single neuron. We will train the neural network shown here to realize the logical XOR function. Doing so will be more involved than the single neuron. We will need to study the circuit closely and understand each component to expedite the training.<br><br>
+      </ul>
+    </div>
+  </nav>
 
-                      Note the different architectures used for the excitatory vs. inhibitory neuron. While similar to the excitatory neuron that has been discussed thus far, the inhibitory neuron’s inverting configuration consists of a weighted voltage-summing inverting-amplifier followed by a voltage comparator for activation.   The voltage at the output of the summing amplifier is given by the relationship:<br><br>
-                      
-                      <div class="row">
-                      <div class="col-xl text-center"><i>v<sub>2</sub>=w<sub>2</sub> D<sub>0</sub>+w<sub>3</sub> D<sub>1</sub><br><br></i></div></div>
-                      
-
-                      The analog neural network has 6 weights that can be adjusted to implement the XOR function. We are also free to set the threshold and supply voltages as necessary, though suggestions are provided. To build this circuit, we used a &#177;3V supply with threhold voltages of &#177;1.2V.<br><br></p1>
-                  
-              </div>
-              </div>
-          
-          <div class="row">
-                  <div class="col-xl text-center mb-5">
-                <img src="photos/ananlog_nn.png" class = "img-fluid rounded center mt-5" alt="analog_nn">
-                  <h5>Figure 5. Analog Neural Network</h5>
-                    </div>
-              </div>
-          
-          <div class="row">
-              <div class="col-xl text-justify">
-                  <p1>The analog neural network was trained using the same process as descibed above. After backpropaging the error manually and adjusting the weights, the circuit could sucessfully perform the XOR function. I hope this has been a helpful explanation of how you too could build an analog neural network. I believe that with the increasing prevalance of neural computing architectures in many of our hand-held devices, it is important to understand how analog and mixed-signal neural networks provide a high efficiency architecture in power-contstrained and mobile applications.<br><br></p1>
-                  
-              </div>
-              </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+  <!-- Analog Neural Network -->
+  <div class="container-fluid col-xs-6 col-s-6 col-l-6 col-xl-6 pt-5 px-5">
+    <div class="row">
+      <div class="col-xl text-center">
+        <h1><br>The Analog Neural Network<br></h1>
       </div>
-      
-      <!--- Footer --->
-      <div class="container-fluid footer" id="contact">
-          <div class="row">
-              <div class="col-12 text-center bg-dark text-light">
-                                  
-            <div class="row text-center">
-                <div class="col-12 text-center pb-1">
-                <h5>Contact</h5>
-                </div>
-                  
-            </div> 
-                  
-          <div class="col-12 pb-2">
-        <a href="https://www.linkedin.com/in/dylanrosser" class="col-3"> <i class="fa fa-linkedin" style="font-size:24px;color:#0072b1"></i></a>
-          <a href="https://wwww.github.com/dylanrosser" class="col-3"><i class="fa fa-github" style="font-size:24px;color:white"></i></a>
-          <a href="contact.html" class="col-3"><i class="fa fa-envelope" style="font-size:24px;color:azure"></i></a>
-                  </div>
-      <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank" class="col-12">
-<img src="https://hitwebcounter.com/counter/counter.php?page=7756710&style=0007&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
-                  
-                  <p1>&#169; Dylan Rosser 2021<br><br></p1>
-              </div>
-          </div>
-          </div>
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </div>
 
-  </body>
+    <div class="row">
+      <div class="col-xl text-center">
+        <h3><br>I. Introduction<br></h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 text-justify">
+        <p1>Contemporary electronic neural networks are a topic of much research. In the last decade, they have
+          contributed significantly to advances in the fields of computer vision, natural language processing, and many
+          others. Artificial neural networks (ANN) attempt to mimic the computational structure of the human brain. Much
+          like neural pathways inside our brains are strengthened, or weakened, to form the basis of memory, cognition,
+          and learning, the ‘weights’ inside an ANN can be modified using backpropagation during supervised learning.
+        </p1>
+
+        <p1> While the majority of ANNs exist in the digital domain, increasingly by semi-special purpose ICs like the
+          GPU or TPU, the desire for always-on, low power edge computing has inspired some unique solutions that utilize
+          analog or mixed-signal neural networks. In this project, I demonstrate how to build and train an artificial
+          analog neural network that can compute common logic functions.<br><br></p1>
+
+        <p1>The biological neuron, shown in figure 1, is the basis of ANNs. The dendrites receive electrical signals
+          from other neurons. The ‘strength’ of these received signals is controlled by chemicals called
+          neurotransmitters that exist in the synapse, or gap, between neurons. The cell body of the neuron effectively
+          sums the received electrical signals. If the sum of these signals crosses a threshold, the neuron will fire,
+          or activate.<br><br></p1>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-center mb-5">
+        <img src="photos/bioneuron.jpg" class="img-fluid rounded center mt-5" alt="Biological_Neuron">
+        <h5>Figure 1. The Biological Neuron<br></h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-justify">
+        <p1>The biological neuron serves as the inspiration for the artificial neuron shown in figure 2. Each input to
+          the neuron, <i>x<sub>0</sub> … x<sub>n</sub></i>, is multiplied by a weight, <i>w<sub>0</sub> …
+            w<sub>n</sub></i>, and the sum of these products is computed. A bias value, b, is often included in the sum,
+          but is omitted here for simplicity. The sum is passed through an activation function to determine the output.
+          In this project, we will use op-amps to realize both the weighted sum calculation and the activation function.
+        </p1>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-center mb-5">
+        <img src="photos/artificial_neuron.jpg" class="img-fluid rounded center mt-5" alt="artificial_neuron">
+        <h5>Figure 2. The Artificial Neuron</h5>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-xl text-justify">
+        <p1>Figure 3 shows a typical implementation of a shallow feed-forward artificial neural network. Input vector
+          <i>x</i> is multiplied with a weight matrix, then passed to an activation function to produce <i>y</i>.
+          Another weight matrix is multiplied with <i>y</i>, then passed through an activation function to calculate the
+          output values.
+        </p1>
+
+        <p1>Before we can use an ANN, we must train it. Training a neural network means to adjust the weights in
+          response to error you observe at the output. The conventional method of training a neural network is to use
+          the <a href="http://neuralnetworksanddeeplearning.com/chap2.html">backpropagation algorithm</a>. In this
+          project, we backpropagate the error manually, adjusting the weights in response to an error at the output. For
+          the simple neural network we will build, it is possible to train the network using a little intuition and
+          circuit analysis. </p1>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-center mb-5">
+        <img src="photos/artificial_nn.jpg" class="img-fluid rounded center mt-5" alt="artificial_neuron">
+        <h5>Figure 3. Artificial Neural Network</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-center">
+        <h3><br>II. The Analog Neuron<br></h3>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-xl text-justify">
+        <p1>Figure 4 shows the analog neuron that will form the basis of the network we will build. In the figure, DIO 0
+          & 1 represent 3.3V logic level signals being driven by the <a
+            href="https://wiki.analog.com/university/tools/m2k">Analog Devices Active Learning Module</a> used to test
+          this circuit. This means that DIO 0 & 1 can toggle between 0 and 3.3V. The circuit uses &#177;3V supply, but
+          larger voltage rails are acceptable if your op-amps are rated for it. The circuit uses two potentiometers as
+          weights for the two inputs. The setting of the potentiometer acts as a voltage divider to set the weight of
+          the input. The first op-amp computes the weighted sum of the inputs. This is also know as
+          multiply-and-accumulate (MAC), and is equivalent to the inner product calculation described above.<br><br>
+        </p1>
+
+        <div class="row">
+          <div class="col-xl text-center mb-5">
+            <p1><i>v<sub>1</sub>=w<sub>0</sub> D<sub>0</sub>+w<sub>1</sub> D<sub>1</sub></i></p1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl text-center mb-5">
+            <img src="photos/analog_neuron.png" class="img-fluid rounded center mt-5" alt="analog_neuron">
+            <h5>Figure 4. Analog Neuron</h5>
+          </div>
+        </div>
+
+        <p1>The second op-amp realizes the activation function. The value at the output of the first op-amp (the
+          weighted sum) is compared to a threshold that is set by analog output pin W1. For this circuit, W1 was set to
+          1.2V, though there is a range of voltages that would be acceptabled based on how the weights are set. If that
+          weighted sum is greater than the threshold, the neuron fires, and the output of the neuron will approach the
+          positive supply rail. An op-amp configured in this way functions as a comparator and can be referred to as
+          such. <br><br>
+
+          Our goal is to train the analog neuron to realize the logical AND function. This will require us to toggle the
+          digital output and adjust the weights manually. We can also analyze the resistive portion of the circuit
+          (summing amplifier) by using our circuit analysis toolbox: superposition, resistive voltage dividers, KVL, and
+          KCL. Other variables that we can exercise are the weights, threshold, and supply voltages. The training
+          procedure for this circuit is such:<br><br>
+
+          <ol class="numbered">
+            <li>Toggle DIO 0 and DIO 1 and observe how the circuit's output changes.<br><br></li>
+            <li>For a given set of inputs, try changing the weights one at a time until the output is correct. Then
+              change the inputs and adjust the weights again, until the output is correct.<br><br></li>
+            <li>In general, if changing an input seems to contribute to the incorrect answer, try decreasing that
+              input’s weight. Conversely, if an input seems to contribute to the correct answer, try increasing that
+              input’s weight.<br><br></li>
+            <li>Repeat these steps until the circuit produces the logical AND function.<br><br></li>
+          </ol>
+
+          If these steps fail, you can always derive precise weight values analytically. Once the analog neuron has been
+          built and trained, we can use multiple neurons to build an analog artificial neural network and train more
+          complex functions.
+        </p1>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-center">
+        <h3><br>III. The Analog Neural Network<br></h3>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xl text-justify">
+        <p1>The Analog Neural Network of figure 5 combines 3 neurons into a 2-layer architecture, that can be trained to
+          implement more complex functions than a single neuron. We will train the neural network shown here to realize
+          the logical XOR function. Doing so will be more involved than the single neuron. We will need to study the
+          circuit closely and understand each component to expedite the training.<br><br>
+
+          Note the different architectures used for the excitatory vs. inhibitory neuron. While similar to the
+          excitatory neuron that has been discussed thus far, the inhibitory neuron’s inverting configuration consists
+          of a weighted voltage-summing inverting-amplifier followed by a voltage comparator for activation. The voltage
+          at the output of the summing amplifier is given by the relationship:<br><br>
+
+          <div class="row">
+            <div class="col-xl text-center"><i>v<sub>2</sub>=w<sub>2</sub> D<sub>0</sub>+w<sub>3</sub>
+                D<sub>1</sub><br><br></i></div>
+          </div>
+
+
+          The analog neural network has 6 weights that can be adjusted to implement the XOR function. We are also free
+          to set the threshold and supply voltages as necessary, though suggestions are provided. To build this circuit,
+          we used a &#177;3V supply with threhold voltages of &#177;1.2V.<br><br>
+        </p1>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-center mb-5">
+        <img src="photos/ananlog_nn.png" class="img-fluid rounded center mt-5" alt="analog_nn">
+        <h5>Figure 5. Analog Neural Network</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl text-justify">
+        <p1>The analog neural network was trained using the same process as descibed above. After backpropaging the
+          error manually and adjusting the weights, the circuit could sucessfully perform the XOR function. I hope this
+          has been a helpful explanation of how you too could build an analog neural network. I believe that with the
+          increasing prevalance of neural computing architectures in many of our hand-held devices, it is important to
+          understand how analog and mixed-signal neural networks provide a high efficiency architecture in
+          power-contstrained and mobile applications.<br><br></p1>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <!--- Footer --->
+  <div class="container-fluid footer" id="contact">
+    <div class="row">
+      <div class="col-12 text-center bg-dark text-light">
+
+        <div class="row text-center">
+          <div class="col-12 text-center pb-1">
+            <h5>Contact</h5>
+          </div>
+
+        </div>
+
+        <div class="col-12 pb-2">
+          <a href="https://www.linkedin.com/in/dylanrosser" class="col-3"> <i class="fa fa-linkedin"
+              style="font-size:24px;color:#0072b1"></i></a>
+          <a href="https://wwww.github.com/dylanrosser" class="col-3"><i class="fa fa-github"
+              style="font-size:24px;color:white"></i></a>
+          <a href="contact.html" class="col-3"><i class="fa fa-envelope" style="font-size:24px;color:azure"></i></a>
+        </div>
+        <!-- hitwebcounter Code START -->
+        <a href="https://www.hitwebcounter.com" target="_blank" class="col-12">
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=7756710&style=0007&nbdigits=5&type=ip&initCount=0"
+            title="Free Counter" Alt="web counter" border="0" /></a>
+
+        <p1>&#169; Dylan Rosser 2021<br><br></p1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>

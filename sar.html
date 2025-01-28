@@ -1,168 +1,198 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>dylanrosser.us</title>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
-  <body>
-      <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light smart-scroll">
-  <a class="navbar-brand" href="index.html">Dylan</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+  <title>dylanrosser.us</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light smart-scroll">
+    <a class="navbar-brand" href="index.html">Dylan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
+      <ul class="navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" href="resume/Dylan_Rosser_Resume_no_contact.pdf">Resume</a>
-      </li>
+          <a class="nav-link" href="resume/Dylan_Rosser_Resume_2025.pdf">Resume</a>
+        </li>
         <li class="nav-item">
-        <a class="nav-link active" href="index.html#projects">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html#contact">Contact</a>
-      </li>
-        
-      
-    </ul>
+          <a class="nav-link active" href="index.html#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
+
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SAR ADC -->
+  <div class="container-fluid col-xs-6 col-s-6 col-l-6 col-xl-6 pt-5 px-5">
+
+    <div class="row mt-3">
+      <div class="col text-center">
+        <h1>Successive Approximation Register Analog-to-Digital Converter</h1>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-justify">
+        <p1>A Successive Approximation Register Analog-to-Digital Converter (SAR ADC) converts an analog voltage to
+          digital code by performing a binary search. Put simply, the ADC starts with a guess of the analog voltage
+          value, then repeatedly refines this guess by comparing it to the true value. The core components of a SAR ADC
+          are a sample-and-hold circuit, a comparator, a digital-to-analog converter (DAC), and the control logic. This
+          page features a SAR ADC designed by my team at Carnegie Mellon University and taped out in a 28-nm CMOS
+          process in 2020.</p1>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>SAR ADC Block Diagram</h5>
+        <img src="photos/SAR_diff.png" alt="SAR Layout" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>Chip Layout</h5>
+        <img src="photos/chip_callout.png" alt="SAR Layout" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-justify">
+        <p1>Each component in the SAR ADC is outlined in red below. The bootstrap switch, combined with the capacitive
+          digital-to-analog converter (CDAC) comprise a sample-and-hold circuit. The bootstrap switch utilizes feedback
+          to keep the drain to source voltage of the sampling switch constant. This constant V<sub>ds</sub> across the
+          sampling switch gives the bootstrap switch good linearity, making it an ideal circuit for analog data
+          aquisition. The split-capacitor charge redistribution DAC uses binary weighted capacitors with a unit size
+          ~1fF. These capacitors were implemented as MOMCAPs on the metal 6 layer.</p1>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>SAR ADC Components</h5>
+        <img src="photos/SAR_floorplan.png" alt="SAR Layout" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>SAR ADC Components</h5>
+        <img src="photos/SAR_layout.png" alt="SAR Layout" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-justify">
+        <p1>A Comparator is a circuit that <i>compares</i> two voltages. The role of a comparator in a SAR ADC is to
+          compare the current estimation of the input to the true input. More accurately, the comparator in this ADC
+          tells us the polarity of our error after each loop update. Because of the high speed and low voltage overhead
+          of this design, the speed and noise performance of the comparator are critical. The comparator shown here
+          operates at speeds over 1 GHz while contributing minimal noise to each measurement.</p1>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>Comparator Schematic</h5>
+        <img src="photos/strongarm.png" alt="StrongARM Schematic" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>Comparator Layout</h5>
+        <img src="photos/strongarm_layout.png" alt="StrongARM" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-justify">
+        <p1>This comparator was laid out following the design rules for a 28nm process. Close attention has been paid to
+          mitigate the effects of parasitics and process gradients. Dummy devices and interdigitated devices help
+          minimize the effects of process gradients, and improve matching.</p1>
+      </div>
+    </div>
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>Bootstrap Switch Layout</h5>
+        <img src="photos/th_with_dummy_layout.png" alt="bootstrap" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+      <div class="col text-center">
+        <h5>Control Logic Layout</h5>
+        <img src="photos/SAR_logic_layout.png" alt="StrongARM" , class="img-fluid rounded mx-auto">
+      </div>
+    </div>
+
+
   </div>
-</nav>
 
-      <!-- SAR ADC -->
-      <div class = "container-fluid col-xs-6 col-s-6 col-l-6 col-xl-6 pt-5 px-5">
-          
-          <div class="row mt-3">
-              <div class="col text-center">
-                <h1>Successive Approximation Register Analog-to-Digital Converter</h1>
-                </div>
-            </div>
-          
-            <div class="row mt-3 mb-5">
-              <div class="col text-justify">
-                <p1>A Successive Approximation Register Analog-to-Digital Converter (SAR ADC) converts an analog voltage to digital code by performing a binary search. Put simply, the ADC starts with a guess of the analog voltage value, then repeatedly refines this guess by comparing it to the true value. The core components of a SAR ADC are a sample-and-hold circuit, a comparator, a digital-to-analog converter (DAC), and the control logic. This page features a SAR ADC designed by my team at Carnegie Mellon University and taped out in a 28-nm CMOS process in 2020.</p1>
-                </div>
-            </div>
-          
-          <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>SAR ADC Block Diagram</h5>
-                <img src="photos/SAR_diff.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
 
-            <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>Chip Layout</h5>
-                <img src="photos/chip_callout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
-          
-          <div class="row mt-3 mb-5">
-              <div class="col text-justify">
-                <p1>Each component in the SAR ADC is outlined in red below. The bootstrap switch, combined with the capacitive digital-to-analog converter (CDAC) comprise a sample-and-hold circuit. The bootstrap switch utilizes feedback to keep the drain to source voltage of the sampling switch constant. This constant V<sub>ds</sub> across the sampling switch gives the bootstrap switch good linearity, making it an ideal circuit for analog data aquisition. The split-capacitor charge redistribution DAC uses binary weighted capacitors with a unit size ~1fF. These capacitors were implemented as MOMCAPs on the metal 6 layer.</p1>
-                </div>
-            </div>
 
-            <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>SAR ADC Components</h5>
-                <img src="photos/SAR_floorplan.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
+  <!--- Footer --->
+  <div class="container-fluid footer" id="contact">
+    <div class="row">
+      <div class="col-12 text-center bg-dark text-light">
 
-            <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>SAR ADC Components</h5>
-                <img src="photos/SAR_layout.png" alt="SAR Layout", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
-          
-          <div class="row mt-3 mb-5">
-              <div class="col text-justify">
-                <p1>A Comparator is a circuit that <i>compares</i> two voltages. The role of a comparator in a SAR ADC is to compare the current estimation of the input to the true input. More accurately, the comparator in this ADC tells us the polarity of our error after each loop update. Because of the high speed and low voltage overhead of this design, the speed and noise performance of the comparator are critical. The comparator shown here operates at speeds over 1 GHz while contributing minimal noise to each measurement.</p1>
-                </div>
-            </div>
+        <div class="row text-center">
+          <div class="col-12 text-center pb-1">
+            <h5>Contact</h5>
+          </div>
 
-            <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>Comparator Schematic</h5>
-                  <img src="photos/strongarm.png" alt="StrongARM Schematic", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
-          
-            <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>Comparator Layout</h5>
-                <img src="photos/strongarm_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
-          
-          <div class="row mt-3 mb-5">
-              <div class="col text-justify">
-                <p1>This comparator was laid out following the design rules for a 28nm process. Close attention has been paid to mitigate the effects of parasitics and process gradients. Dummy devices and interdigitated devices help minimize the effects of process gradients, and improve matching.</p1>
-                </div>
-            </div>
-          <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>Bootstrap Switch Layout</h5>
-                <img src="photos/th_with_dummy_layout.png" alt="bootstrap", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
-          
-          <div class="row mt-3 mb-5">
-              <div class="col text-center">
-                  <h5>Control Logic Layout</h5>
-                <img src="photos/SAR_logic_layout.png" alt="StrongARM", class="img-fluid rounded mx-auto">
-                </div>
-            </div>
-          
-      
-</div>
-      
-    
+        </div>
 
-      <!--- Footer --->
-      <div class="container-fluid footer" id="contact">
-          <div class="row">
-              <div class="col-12 text-center bg-dark text-light">
-                                  
-            <div class="row text-center">
-                <div class="col-12 text-center pb-1">
-                <h5>Contact</h5>
-                </div>
-                  
-            </div> 
-                  
-          <div class="col-12 pb-2">
-        <a href="https://www.linkedin.com/in/dylanrosser" class="col-3"> <i class="fa fa-linkedin" style="font-size:24px;color:#0072b1"></i></a>
-          <a href="https://wwww.github.com/dylanrosser" class="col-3"><i class="fa fa-github" style="font-size:24px;color:white"></i></a>
+        <div class="col-12 pb-2">
+          <a href="https://www.linkedin.com/in/dylanrosser" class="col-3"> <i class="fa fa-linkedin"
+              style="font-size:24px;color:#0072b1"></i></a>
+          <a href="https://wwww.github.com/dylanrosser" class="col-3"><i class="fa fa-github"
+              style="font-size:24px;color:white"></i></a>
           <a href="contact.html" class="col-3"><i class="fa fa-envelope" style="font-size:24px;color:azure"></i></a>
-                  </div>
-      <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank" class="col-12">
-<img src="https://hitwebcounter.com/counter/counter.php?page=7756710&style=0007&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
-                  
-                  <p1>&#169; Dylan Rosser 2021<br><br></p1>
-              </div>
-          </div>
-          </div>
-          
-          
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        </div>
+        <!-- hitwebcounter Code START -->
+        <a href="https://www.hitwebcounter.com" target="_blank" class="col-12">
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=7756710&style=0007&nbdigits=5&type=ip&initCount=0"
+            title="Free Counter" Alt="web counter" border="0" /></a>
 
-  </body>
+        <p1>&#169; Dylan Rosser 2021<br><br></p1>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
